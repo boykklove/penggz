@@ -1,0 +1,25 @@
+{
+  "match_id": "demo_match_001",
+  "duration_sec": 2543,
+  "map": "Arabia",
+  "players": [
+    {
+      "name": "PlayerA",
+      "civ": "Mayans",
+      "feudal": 620,
+      "castle": 1120,
+      "imperial": 1890,
+      "barracks": 160,
+      "archery_range": 730
+    },
+    {
+      "name": "PlayerB",
+      "civ": "Franks",
+      "feudal": 655,
+      "castle": 1188,
+      "imperial": 1944,
+      "barracks": 178,
+      "stable": 760
+    }
+  ]
+}
