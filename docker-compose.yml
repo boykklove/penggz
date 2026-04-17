@@ -1,0 +1,17 @@
+services:
+  okx-bot:
+    # 如果你已经把镜像推送到仓库，可改成 image: ghcr.io/<your-org>/okx-futures-bot:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: okx-futures-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    command: ["python", "okx_futures_bot.py"]
+    healthcheck:
+      test: ["CMD-SHELL", "MODE=healthcheck python okx_futures_bot.py || exit 1"]
+      interval: 60s
+      timeout: 20s
+      retries: 3
+      start_period: 20s
